@@ -14,7 +14,7 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-        for($i = 0 ; $i < 10 ; $i++){
+        for($i = 0 ; $i < 1 ; $i++){
 
             $newProjects = new Project();
             $newProjects->name= $faker->word();
@@ -25,6 +25,7 @@ class ProjectsTableSeeder extends Seeder
             $newProjects->img=$faker->image(null,640,480);
             $newProjects->frameworks=$faker->randomElement(["Laravel","React","Bootstrap","Angular","vue-js"]);
             $newProjects->language=$faker->randomElement(["HTML","CSS","JAVASCRIPT","PHP"]);
+            $newProjects->title = $faker->word();
             $newProjects->save();
         }
 
