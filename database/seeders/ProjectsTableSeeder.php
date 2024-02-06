@@ -23,6 +23,8 @@ class ProjectsTableSeeder extends Seeder
             $newProjects->age= $faker->randomNumber(2,false);
             $newProjects->description=$faker->paragraph();
             $newProjects->img=$faker->image(null,640,480);
+            $newProjects->frameworks=$faker->randomElement(["Laravel","React","Bootstrap","Angular","vue-js"]);
+            $newProjects->language=$faker->randomElement(["HTML","CSS","JAVASCRIPT","PHP"]);
             $newProjects->save();
         }
 
