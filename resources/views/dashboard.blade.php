@@ -19,5 +19,10 @@
                 </div>
             </div>
         </div>
+        <div>
+            <a href="{{ route('admin.project.index') }}">
+                clicca qui per vedere il mio progetto
+            </a>
+        </div>
     </div>
 @endsection
