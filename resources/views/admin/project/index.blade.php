@@ -30,6 +30,9 @@
                     </li>
                 @endforeach
             </ul>
+            {{-- <a href="{{route("admin.project.create")}}">
+                clicca qui per vededere le informazioni
+            </a> --}}
         </div>
     </header>
 @endsection
