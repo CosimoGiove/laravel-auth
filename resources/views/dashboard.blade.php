@@ -44,9 +44,9 @@
                             <td>
                                 <div class="d-flex">
                                     <span>
-                                        <form action="{{ route('admin.project.show', $project) }}" method="GET">
+                                        <form action="{{ route('admin.project.edit', $project) }}" method="GET">
                                             <span>
-                                                <button>visualizza</button>
+                                                <button>modifica</button>
                                             </span>
                                         </form>
                                     </span>
