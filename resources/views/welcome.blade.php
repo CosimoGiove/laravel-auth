@@ -1,5 +1,9 @@
 @extends('layouts.app')
-@section('content')
+{{-- @foreach ($newProject as $item)
+    {{$item["name"]}}
+@endforeach --}}
+
+{{-- @section('content')
 
 <div class="jumbotron p-5 mb-4 bg-light rounded-3">
     <div class="container py-5">
@@ -24,4 +28,4 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus, dicta nemo aliquam totam nisi deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis accusamus dolores!</p>
     </div>
 </div>
-@endsection
+@endsection --}}
