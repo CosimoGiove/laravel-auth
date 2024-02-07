@@ -21,10 +21,10 @@ Route::get('/', function () {
 });
 
 
-Route::get('/dashboard',[DashboardController::class,"index"]
-// function () {
-//     return view('dashboard')
-)->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard',[DashboardController::class,"index"]
+// // function () {
+// //     return view('dashboard')
+// )->middleware(['auth', 'verified'])->name('dashboard');
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -35,8 +35,8 @@ Route::middleware(['auth', 'verified'])
     ->name('admin.')
     ->prefix('admin')
     ->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource("/project",ProjectController::class);
-        // Route::get('/', [DashboardController::class, 'index']);
 
     });
 

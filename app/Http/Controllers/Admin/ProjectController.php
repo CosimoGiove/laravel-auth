@@ -21,9 +21,12 @@ class ProjectController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Project $project)
+
     {
-        return view('admin.project.create');
+        $newProject = Project::all();
+
+        return view('admin.project.create',compact("newProject"));
     }
 
     /**
@@ -31,7 +34,16 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $NewProject = new Project();
+        $NewProject->title = $data["title"];
+        $NewProject->description = $data["description"];
+        $NewProject->language = $data["language"];
+        $NewProject->frameworks = $data["frameworks"];
+        $NewProject->save();
+
+        return redirect()->route("admin.dashboard",$NewProject->id);
+
     }
 
     /**
@@ -61,8 +73,10 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        
+        return redirect()->route("admin.dashboard");
     }
 }

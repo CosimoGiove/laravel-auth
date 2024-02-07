@@ -2,7 +2,7 @@
 @section('main')
     <main>
         <div class="container">
-            <a href="{{ route('dashboard') }}">
+            <a href="{{ route('admin.dashboard') }}">
                 torna ai proggetti
             </a>
             <h2>

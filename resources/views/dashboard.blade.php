@@ -33,8 +33,6 @@
                     <tr>
                         <th scope="col">id</th>
                         <th scope="col">titolo</th>
-                        <th scope="col">nome</th>
-                        <th scope="col">cognome</th>
                         <th scope="col">edit</th>
                     </tr>
                 </thead>
@@ -43,8 +41,6 @@
                         <tr>
                             <th scope="row">{{ $project['id'] }}</th>
                             <td>{{ $project['title'] }}</td>
-                            <td>{{ $project['name'] }}</td>
-                            <td>{{ $project['surname'] }}</td>
                             <td>
                                 <div class="d-flex">
                                     <span>
@@ -62,7 +58,9 @@
                                         </form>
                                     </span>
                                     <span>
-                                        <form action="{{ route('admin.project.show', $project) }}" method="GET">
+                                        <form action="{{ route('admin.project.destroy', $project) }}" method="POST">
+                                            @csrf
+                                            @method("DELETE")
                                             <span>
                                                 <button>cancella</button>
                                             </span>
