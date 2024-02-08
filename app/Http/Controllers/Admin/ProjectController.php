@@ -82,6 +82,6 @@ class ProjectController extends Controller
     {
         $project->delete();
         
-        return redirect()->route("admin.dashboard");
+        return redirect()->route("admin.dashboard")->with("message","hai cancellato il messaggio");
     }
 }

@@ -9,3 +9,14 @@
 ul{
     list-style: none;
 }
+.container-project{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    ul{
+        border: 2px solid black;
+        width: calc((100% / 3) - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

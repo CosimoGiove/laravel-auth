@@ -24,7 +24,7 @@
                 il mio portfolio di progetti.
             </h1>
             <form action="{{route("admin.project.create")}}" method="get">
-            <button>
+            <button class="btn btn-success">
                 crea un nuovo post
             </button>
             </form>
@@ -46,14 +46,14 @@
                                     <span>
                                         <form action="{{ route('admin.project.edit', $project) }}" method="GET">
                                             <span>
-                                                <button>modifica</button>
+                                                <button class="btn btn-secondary">modifica</button>
                                             </span>
                                         </form>
                                     </span>
                                     <span>
                                         <form action="{{ route('admin.project.show', $project) }}" method="GET">
                                             <span>
-                                                <button>visualizza</button>
+                                                <button class="btn btn-primary mx-2">visualizza</button>
                                             </span>
                                         </form>
                                     </span>
@@ -62,7 +62,7 @@
                                             @csrf
                                             @method("DELETE")
                                             <span>
-                                                <button>cancella</button>
+                                                <button class="btn btn-danger">cancella</button>
                                             </span>
                                         </form>
                                     </span>

@@ -17,8 +17,8 @@ class ProjectsTableSeeder extends Seeder
         for($i = 0 ; $i < 20 ; $i++){
 
             $newProjects = new Project();
-            $newProjects->name= $faker->word();
-            $newProjects->surname= $faker->word();
+            $newProjects->name= $faker->userName(10);
+            $newProjects->surname= $faker->lastName(10);
             $newProjects->email=$faker->email();
             $newProjects->age= $faker->randomNumber(2,false);
             $newProjects->description=$faker->paragraph();
